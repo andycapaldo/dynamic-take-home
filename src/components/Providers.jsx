@@ -6,6 +6,7 @@ const Providers = ({ children }) => {
   const envID = import.meta.env.VITE_DYNAMIC_ENVIRONMENT_ID;
   return (
     <DynamicContextProvider
+      theme="dark"
       settings={{
         environmentId: envID,
         walletConnectors: [EthereumWalletConnectors, SolanaWalletConnectors],
