@@ -41,7 +41,7 @@ const HomePage = () => {
         </div>
       ) : !sdkHasLoaded ? (
         <div className="flex justify-center items-center">
-          <i className="fa-solid fa-circle-notch text-blue-green/55 text-2xl animate-spin"></i>
+          <i className="fa-solid fa-spinner text-blue-green/55 text-2xl animate-spin"></i>
         </div>
       ) : (
         <div>Please Sign-in</div>
