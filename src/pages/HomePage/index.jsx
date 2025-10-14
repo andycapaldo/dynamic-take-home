@@ -15,8 +15,6 @@ const HomePage = () => {
     ['passkey', 'totp'].includes(credential.format)
   ) ?? false; 
 
-  console.log(user);
-
   return (
     <div>
       {user && primaryWallet && sdkHasLoaded ? (
