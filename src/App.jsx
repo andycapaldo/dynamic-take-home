@@ -1,12 +1,20 @@
 import Providers from "./components/Providers";
 import Shell from "./components/Shell";
+import HomePage from "./pages/HomePage";
+import Mint from "./pages/Mint";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
     <Providers>
-      <Shell>
-        Content
-      </Shell>
+      <BrowserRouter>
+        <Shell>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/mint" element={<Mint />} />
+          </Routes>
+        </Shell>
+      </BrowserRouter>
     </Providers>
   );
 };
