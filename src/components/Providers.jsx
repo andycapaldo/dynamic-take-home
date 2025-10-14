@@ -8,15 +8,18 @@ import { createConfig, WagmiProvider } from "wagmi";
 import { http } from 'viem';
 import { baseSepolia } from "wagmi/chains";
 
+const queryClient = new QueryClient();
+
+const zeroDevProjectId = import.meta.env.VITE_ZERODEV_PROJECT_ID;
+
 const wagmiConfig = createConfig({
   chains: [baseSepolia],
   multiInjectedProviderDiscovery: false,
   transports: {
-    [baseSepolia.id]: http(),
+    [baseSepolia.id]: http(`https://rpc.zerodev.app/api/v2/bundler/${zeroDevProjectId}`),
   },
 });
 
-const queryClient = new QueryClient();
 
 const Providers = ({ children }) => {
   const envID = import.meta.env.VITE_DYNAMIC_ENVIRONMENT_ID;
