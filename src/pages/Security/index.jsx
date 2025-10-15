@@ -6,7 +6,7 @@ const Security = () => {
         <p className="my-4">
           Dynamic's embedded wallets are designed to secure user funds and
           assets by default. Utilizing{" "}
-          <span className="text-blue-green">TSS-MPC</span> key management, the
+          <span className="text-blue-green font-bold">TSS-MPC</span> key management, the
           core concept to understand is that the "master key" to a wallet is
           never fully stored in one place.
         </p>
@@ -14,7 +14,7 @@ const Security = () => {
           Instead, the key is split into multiple "shares" that are distributed
           across different locations. Even when a user is signing transactions,
           the full key is not reconstructed in the backend. Dynamic uses{" "}
-          <span className="text-blue-green">
+          <span className="text-blue-green font-bold">
             Trusted Execution Environments (TEEs)
           </span>{" "}
           where sensitive operations like key decryption and signing occur. This
@@ -89,7 +89,7 @@ const Security = () => {
           Action-based MFA enables you to require users to 
           verify their identity for sensistive actions like making transactions.
         </p>
-        <p className="my-4 text-blue-green">
+        <p className="my-4 text-blue-green font-bold">
             To see how easy it is to add an MFA method with Dynamic, try setting up a
             passkey or TOTP in the user settings of the Dynamic widget below!
         </p>
