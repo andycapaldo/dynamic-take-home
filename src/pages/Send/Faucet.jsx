@@ -1,4 +1,4 @@
-import * as faucetService from "../../lib/hooks";
+import * as faucetService from "../../lib/hooks/faucet";
 import CopyableAddress from "./CopyableAddress";
 
 const Faucet = () => {
@@ -8,7 +8,7 @@ const Faucet = () => {
     try {
       await mintTokens();
     } catch (e) {
-      console.log(e);
+      // Error is already handled in the hook
     }
   };
 
@@ -16,7 +16,7 @@ const Faucet = () => {
     <div className="p-4">
       <h2 className="text-xl font-bold">fUSDC Faucet</h2>
       <p className="my-4 text-sm">
-        Click the button to receive 100 fake USDC on Base Sepolia
+        Click the button to receive 100 fake USDC (only on Base Sepolia)
       </p>
 
       <button
