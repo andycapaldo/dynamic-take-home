@@ -12,6 +12,7 @@ const Shell = ({ children }) => {
           <Link to='/' className="text-3xl font-semibold font-playfair"><Logo /></Link>
           <Link to='/mint'  className="text-lg font-medium font-lato border border-blue-green/55 rounded-lg px-4 py-2 hover:bg-blue-green/10 transition">Mint</Link>
           <Link to='/send'  className="text-lg font-medium font-lato border border-blue-green/55 rounded-lg px-4 py-2 hover:bg-blue-green/10 transition">Send</Link>
+          <Link to='/chains'  className="text-lg font-medium font-lato border border-blue-green/55 rounded-lg px-4 py-2 hover:bg-blue-green/10 transition">Chains</Link>
           <DynamicWidget />
         </nav>
         <main className="mt-12 max-w-2xl flex flex-col mx-auto">

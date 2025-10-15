@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import Mint from "./pages/Mint";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Send from "./pages/Send";
+import Chains from "./pages/Chains";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/mint" element={<Mint />} />
             <Route path="/send" element={<Send />} />
+            <Route path="/chains" element={<Chains />} />
           </Routes>
         </Shell>
       </BrowserRouter>
