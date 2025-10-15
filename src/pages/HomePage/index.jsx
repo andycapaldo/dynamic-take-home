@@ -3,6 +3,7 @@ import {
   useUserWallets,
 } from "@dynamic-labs/sdk-react-core";
 import CopyableAddress from "../../components/CopyableAddress";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const { user, primaryWallet, sdkHasLoaded } = useDynamicContext();
@@ -53,20 +54,25 @@ const HomePage = () => {
             </p>
             <p className="my-4">
               If you navigate over to the{" "}
-              <span className="text-blue-green font-bold">Mint</span> page, you
+              <Link to='/mint'><span className="text-blue-green font-bold">Mint</span></Link> page, you
               can mint an NFT on the Base Sepolia Testnet in just 2 clicks. No
               crypto required!
             </p>
             <p className="my-4">
-              The <span className="text-blue-green font-bold">Send</span> page
+              The <Link to='/send'><span className="text-blue-green font-bold">Send</span></Link> page
               provides a faucet for some free USDC on Base Sepolia, which you
               can then send to any address you want. Again, no crypto required!
             </p>
             <p className="my-4">
-              The <span className="text-blue-green font-bold">Chains</span> page
+              The <Link to='/chains'><span className="text-blue-green font-bold">Chains</span></Link> page
               offers some more information about Dynamic's multi-chain
               capabilities, and allows you to switch between the two chains
               enabled in this app. 
+            </p>
+            <p className="my-4">
+              Finally, the <Link to='/security'><span className="text-blue-green font-bold">Security</span></Link> page
+              goes into detail about Dynamic's robust security architecture,
+              including TSS-MPC key management and multi-factor authentication.
             </p>
             <p className="my-4">
               I hope you enjoy testing out the Dynamic SDK! If you have any
