@@ -20,6 +20,10 @@ const wagmiConfig = createConfig({
   },
 });
 
+const cssOverrides = `.transaction-status-layout__transaction-link-container__transaction-link {
+  color: #07A0C3 !important;
+}`
+
 
 const Providers = ({ children }) => {
   const envID = import.meta.env.VITE_DYNAMIC_ENVIRONMENT_ID;
@@ -35,6 +39,7 @@ const Providers = ({ children }) => {
           ZeroDevSmartWalletConnectors,
         ],
         multiWallet: true,
+        cssOverrides,
       }}
     >
       <WagmiProvider config={wagmiConfig}>
