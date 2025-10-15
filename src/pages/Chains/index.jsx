@@ -11,14 +11,14 @@ const Chains = () => {
 
   return (
     <div className="p-4">
-      <h2 className="text-xl font-bold">Multi-Chain Coverage</h2>
+      <h2 className="text-2xl font-bold">Multi-Chain Coverage</h2>
       {primaryWallet && (
         <div className="my-4 p-2 border border-blue-green/65 rounded-lg">
           Currently connected to:{" "}
           <span className="font-bold text-blue-green">{'EVM' === primaryWallet.chain ? 'Base Sepolia' : 'Solana Devnet'}</span>
         </div>
       )}
-      <div className="text-sm">
+      <div className="">
         <p className="my-4">
           Dynamic supports more chains and wallets than any other wallet
           provider, empowering developers to craft tailored experiences that
