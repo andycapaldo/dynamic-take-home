@@ -5,6 +5,7 @@ import Mint from "./pages/Mint";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Send from "./pages/Send";
 import Chains from "./pages/Chains";
+import Security from "./pages/Security";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
             <Route path="/mint" element={<Mint />} />
             <Route path="/send" element={<Send />} />
             <Route path="/chains" element={<Chains />} />
+            <Route path="/security" element={<Security />} />
           </Routes>
         </Shell>
       </BrowserRouter>
