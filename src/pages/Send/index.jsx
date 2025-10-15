@@ -1,7 +1,12 @@
+import Faucet from "./Faucet";
+
 const Send = () => {
-  return (
-    <div>Send</div>
-  )
-}
+
+    return (
+        <div>
+            <Faucet />
+        </div>
+    );
+};
 
 export default Send;
