@@ -14,7 +14,7 @@ const Faucet = () => {
 
   return (
     <div className="p-4">
-      <h2 className="text-xl font-bold">fUSDC Mint</h2>
+      <h2 className="text-xl font-bold">fUSDC Faucet</h2>
       <p className="my-4 text-sm">
         Click the button to receive 100 fake USDC on Base Sepolia
       </p>
