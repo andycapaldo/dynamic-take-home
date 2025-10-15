@@ -12,37 +12,42 @@ const Faucet = () => {
   };
 
   return (
-    <div className='p-4 border rounded-lg space-y-4'>
-      <h2 className='text-xl font-bold'>USDC Faucet</h2>
-      <p className='text-sm text-gray-500'>
-        Click the button to receive 100 fake USDC on Base Sepolia.
-        <br />
-        <strong>Note:</strong> This faucet will only work if your current fake USDC balance is zero.
+    <div className="p-4">
+      <h2 className="text-xl font-bold">fUSDC Mint</h2>
+      <p className="my-4 text-sm">
+        Click the button to receive 100 fake USDC on Base Sepolia
       </p>
 
       <button
         onClick={handleMint}
         disabled={isLoading}
-        className='w-full p-2 bg-green-500 text-white rounded disabled:bg-gray-400'
+        className="w-full border border-blue-green/65 shadow-xl bg-blue-green/55 rounded-lg px-4 py-2 hover:bg-cerulean/25 my-4 transition"
       >
-        {isLoading ? 'Waiting for confirmation...' : 'Get 100 Fake USDC'}
+        {isLoading ? (
+          <div>
+            <i className="fa-solid fa-spinner text-blue-green/55 animate-spin mr-2"></i>
+            Confirming...
+          </div>
+        ) : (
+          "Get 100 fUSDC"
+        )}
       </button>
 
       {/* Transaction Status */}
       {txHash && (
-        <div className='text-green-500'>
+        <div className="text-green-500">
           <p>Success! You received 100 USDC.</p>
           <a
             href={`https://base-sepolia.blockscout.com/tx/${txHash}`}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='underline'
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
           >
             View on Blockscout
           </a>
         </div>
       )}
-      {error && <p className='text-red-500'>Error: {error}</p>}
+      {error && <p className="text-red-500">Error: {error}</p>}
     </div>
   );
 };
