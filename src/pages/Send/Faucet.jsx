@@ -1,5 +1,5 @@
 import * as faucetService from "../../lib/hooks/faucet";
-import CopyableAddress from "./CopyableAddress";
+import CopyableAddress from "../../components/CopyableAddress";
 
 const Faucet = () => {
   const { isLoading, txHash, error, mintTokens } = faucetService.useMint();
@@ -62,7 +62,7 @@ const Faucet = () => {
                 <li className="mb-2">5. Click on the preview transaction button</li>
                 <li className="mb-2">6. If everything looks good, click confirm!</li>
             </ol>
-            <div>
+            <div className="mt-4">
                 <CopyableAddress address="0xd0E90E241DB88d39362e0C3427cd1f53d98aC910"/>
             </div>
           </div>

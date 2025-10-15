@@ -22,7 +22,7 @@ const CopyableAddress = ({ address }) => {
   return (
     <div
       onClick={handleCopy}
-      className="inline-flex items-center gap-2 p-2 mt-2 border rounded-lg cursor-pointer hover:bg-cerulean/55 dark:hover:bg-gray-700"
+      className="inline-flex items-center gap-2 p-1 border rounded-lg cursor-pointer hover:bg-cerulean/55 dark:hover:bg-gray-700"
     >
       <span className="font-mono">
         {`${address.substring(0, 6)}...${address.substring(
