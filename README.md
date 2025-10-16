@@ -2,7 +2,7 @@
 
 A React demo that shows how the Dynamic SDK enables sign in, embedded wallets, gasless transactions, NFT minting, simple money sends, and MFA.
 
-> Inspired by Dynamic’s [official examples.](https://github.com/dynamic-labs/examples/tree/main/starters/nextjs-evm-gasless-zerodev)
+> Inspired by Dynamic’s [official examples.](https://github.com/dynamic-labs/examples)
 
 ## ✅ What this demo covers
 
@@ -99,8 +99,10 @@ npm run dev
 - ZeroDev Account Abstraction must be configured in the Dynamic Dashboard, using ERC-4337 (legacy mode)
 - EOA (externally-owned accounts) are disabled, as the app is meant to just showcase embedded wallets
 - Require / force MFA is turned off, as the app demonstrates how a user can easily set it up themselves
+- Smart contracts for the NFT and fUSDC mints were deployed via Remix IDE
 
 ## :books: Reference Docs
 - [Dynamic Docs](https://docs.dynamic.xyz)
 - [ZeroDev Paymaster (for gas sponsorship)](https://docs.zerodev.app/sdk/core-api/sponsor-gas)
 - [Wagmi Docs](https://wagmi.sh/react/getting-started)
+- [Remix Docs](https://remix-ide.readthedocs.io/en/latest/)
