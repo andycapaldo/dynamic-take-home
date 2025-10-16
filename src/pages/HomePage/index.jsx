@@ -28,21 +28,28 @@ const HomePage = () => {
               <span className="text-blue-green">Dynamic SDK</span> Demo!
             </h2>
             <p className="my-4">
-              Upon signing-in to this app, you have just created two new Web3
-              wallets: one for the Base Sepolia Testnet, and one for the Solana
-              Devnet. The widget below this box comes straight from the Dynamic
-              SDK, and it shows you all pertinent details of your account and
-              wallets. You can also access this widget in a modal by clicking on
-              your wallet address in the top right corner.
+              Upon signing in to this app, you have just created two new
+              embedded Web3 wallets: one for the{" "}
+              <span className="text-blue-green font-bold">
+                Base Sepolia testnet
+              </span>{" "}
+              and one for the{" "}
+              <span className="text-blue-green font-bold">Solana Devnet.</span>{" "}
+              The widget below this box comes straight from the Dynamic SDK, and
+              it shows you all pertinent details of your account and wallets.
+              You can also access this widget in a modal by clicking on your
+              wallet address in the top right corner.
             </p>
             <p className="my-4">
               This app is{" "}
               <span className="text-blue-green font-bold">gasless</span>,
               meaning you can interact with the blockchain without needing to
               hold any cryptocurrency in your wallet. This is made possible by
-              an integration with Zerodev, a paymaster provider which enables
-              account abstraction and sponsors your gas fees. You can read more
-              about this in the{" "}
+              an integration with ZeroDev, a paymaster provider which enables{" "}
+              <span className="text-blue-green font-bold">
+                account abstraction
+              </span>{" "}
+              and sponsors gas fees. Learn more in the{" "}
               <a
                 href="https://www.dynamic.xyz/docs/smart-wallets/add-smart-wallets#gas-sponsorship-setup"
                 target="_blank"
@@ -53,33 +60,47 @@ const HomePage = () => {
               </a>
             </p>
             <p className="my-4">
-              If you navigate over to the{" "}
-              <Link to='/mint'><span className="text-blue-green font-bold">Mint</span></Link> page, you
-              can mint an NFT on the Base Sepolia Testnet in just 2 clicks. No
+              Head to the{" "}
+              <Link to="/mint">
+                <span className="text-blue-green font-bold">Mint</span>
+              </Link>{" "}
+              page to mint an NFT in just 2 clicks. No crypto required!
+            </p>
+            <p className="my-4">
+              The{" "}
+              <Link to="/send">
+                <span className="text-blue-green font-bold">Send</span>
+              </Link>{" "}
+              page gives you a faucet for free USDC on Base Sepolia. After
+              claiming, use the Dynamic widget to send to any address. Again, no
               crypto required!
             </p>
             <p className="my-4">
-              The <Link to='/send'><span className="text-blue-green font-bold">Send</span></Link> page
-              provides a faucet for some free USDC on Base Sepolia, which you
-              can then send to any address you want. Again, no crypto required!
+              The{" "}
+              <Link to="/chains">
+                <span className="text-blue-green font-bold">Chains</span>
+              </Link>{" "}
+              page explains Dynamic's multi-chain capabilities and lets you
+              switch between the two chains enabled in this demo.
             </p>
             <p className="my-4">
-              The <Link to='/chains'><span className="text-blue-green font-bold">Chains</span></Link> page
-              offers some more information about Dynamic's multi-chain
-              capabilities, and allows you to switch between the two chains
-              enabled in this app. 
+              The{" "}
+              <Link to="/security">
+                <span className="text-blue-green font-bold">Security</span>
+              </Link>{" "}
+              page covers Dynamic's robust security architecture, including{" "}
+              <span className="text-blue-green">TSS-MPC</span> key management
+              and{" "}
+              <span className="text-blue-green">
+                multi-factor authentication (MFA).
+              </span>
             </p>
             <p className="my-4">
-              Finally, the <Link to='/security'><span className="text-blue-green font-bold">Security</span></Link> page
-              goes into detail about Dynamic's robust security architecture,
-              including TSS-MPC key management and multi-factor authentication.
-            </p>
-            <p className="my-4">
-              I hope you enjoy testing out the Dynamic SDK! If you have any
+              I hope you enjoy exploring the Dynamic SDK! If you have any
               questions, feel free to reach out to me at
               <span className="text-blue-green font-bold">
                 {" "}
-                andyc@dynamic.xyz
+                andyc@dynamic.xyz.
               </span>
             </p>
           </div>

@@ -15,37 +15,49 @@ const Chains = () => {
       {primaryWallet && (
         <div className="my-4 p-2 border border-blue-green/65 rounded-lg">
           Currently connected to:{" "}
-          <span className="font-bold text-blue-green">{'EVM' === primaryWallet.chain ? 'Base Sepolia' : 'Solana Devnet'}</span>
+          <span className="font-bold text-blue-green">
+            {"EVM" === primaryWallet.chain ? "Base Sepolia" : "Solana Devnet"}
+          </span>
         </div>
       )}
       <div className="">
         <p className="my-4">
-          Dynamic supports more chains and wallets than any other wallet
-          provider, empowering developers to craft tailored experiences that
-          cater to the specific needs of their users.
+          Dynamic supports a wide range of chains and wallets, enabling
+          developers to craft experiences tailored to their users.
         </p>
         <p className="my-4">
-          Dynamic's multi-chain wallet adapter supports hundreds of wallets
-          across all EVM networks, SVM networks, Bitcoin, Cosmos, and more. The
-          wallet login is unified, saving your end-users time and effort.
+          Dynamic's multi-chain wallet adapter works across EVM networks, Solana
+          (SVM), Bitcoin, Cosmos, and more. Login is unified, reducing friction
+          for end users.
         </p>
         <p className="my-4">
-          Developers can seamlessly integrate multiple wallets and chains into
-          their applications, eliminating the need for complex, chain-specific
-          implementations. This flexibility allows developers to reach a broader
-          audience and provide a more inclusive user experience.
+          You can integrate multiple wallets and chains without maintaining
+          complex, chain-specific code. This flexibility helps you reach a
+          broader audience with a consistent UX.
         </p>
         <p className="my-4">
-          This app has two chains enabled: Base Sepolia and Solana Devnet. You
-          can switch between them by selecting your other wallet in the Dynamic
-          widget. <span className="font-bold text-blue-green">Or, switch to them via the buttons below and see the change in
-          your wallet!</span>
+          This demo enables{" "}
+          <span className="text-blue-green font-bold">Base Sepolia</span> and{" "}
+          <span className="text-blue-green font-bold">Solana Devnet.</span> Switch between them by selecting your other wallet in the Dynamic
+          widget,{" "}
+          <span className="font-bold text-blue-green">
+            or switch to them via the buttons below and see the change in your
+            wallet!
+          </span>
         </p>
       </div>
       <div className="flex gap-4 mt-6">
         {userWallets.map((wallet) => (
-          <button key={wallet.id} onClick={() => switchWallet(wallet.id)} className='border border-blue-green/65 shadow-xl bg-blue-green/55 rounded-lg px-4 py-2 hover:bg-cerulean/25 my-4 transition'>
-            {'EVM' === wallet.chain ? 'Switch to Base Sepolia' : 'SOL' === wallet.chain ? 'Switch to Solana Devnet' : `Switch to ${wallet.chain}`}
+          <button
+            key={wallet.id}
+            onClick={() => switchWallet(wallet.id)}
+            className="border border-blue-green/65 shadow-xl bg-blue-green/55 rounded-lg px-4 py-2 hover:bg-cerulean/25 my-4 transition"
+          >
+            {"EVM" === wallet.chain
+              ? "Switch to Base Sepolia"
+              : "SOL" === wallet.chain
+              ? "Switch to Solana Devnet"
+              : `Switch to ${wallet.chain}`}
           </button>
         ))}
       </div>
