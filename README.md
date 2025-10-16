@@ -4,7 +4,7 @@ A React demo that shows how the Dynamic SDK enables sign in, embedded wallets, g
 
 ## What this demo covers
 
-- **Sign in creates two embedded wallets: Base Sepolia and Solana devnet
+-- **Sign in creates two embedded wallets: Base Sepolia and Solana devnet
 
 - **Gasless transactions using a ZeroDev paymaster
 
