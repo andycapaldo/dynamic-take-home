@@ -4,53 +4,53 @@ A React demo that shows how the Dynamic SDK enables sign in, embedded wallets, g
 
 ## What this demo covers
 
-- **Sign in creates two embedded wallets: Base Sepolia and Solana devnet
+ - Sign in creates two embedded wallets: Base Sepolia and Solana devnet
 
-- **Gasless transactions using a ZeroDev paymaster
+ - Gasless transactions using a ZeroDev paymaster
 
-- **NFT mint on Base Sepolia with a 2-click flow
+ - NFT mint on Base Sepolia with a 2-click flow
 
-- **“Send money” that is clear and simple
+ - “Send money” that is clear and simple
 
-- **Multi-chain awareness and switching
+ - Multi-chain awareness and switching
 
-- **Security page that explains TSS-MPC and shows MFA setup
+ - Security page that explains TSS-MPC and shows MFA setup
 
 ## Customer issues and how this demo addresses them
 
 1. Mint NFTs using Dynamic’s embedded wallet
 
- - Mint page calls a simple ERC-721 on Base Sepolia
+  - Mint page calls a simple ERC-721 on Base Sepolia
 
- - User confirms, transaction submits, explorer link appears
+  - User confirms, transaction submits, explorer link appears
 
 2. Offer service on as many chains as Dynamic supports
 
- - App is wired for EVM and Solana today
+  - App is wired for EVM and Solana today
 
- - Chains page explains how to enable more networks through the Dynamic dashboard without code changes
+  - Chains page explains how to enable more networks through the Dynamic dashboard without code changes
 
 3. Explain account abstraction and gas fees
 
- - Gas is sponsored through a ZeroDev paymaster
+  - Gas is sponsored through a ZeroDev paymaster
 
- - Copy on Home and Send pages explains that users do not need gas and why
+  - Copy on Home and Send pages explains that users do not need gas and why
 
 4. User security and additional security
 
-- Security page explains TSS-MPC and TEEs in plain language
+  - Security page explains TSS-MPC and TEEs in plain language
 
-- Users can add passkeys or TOTP in the Dynamic widget
+  - Users can add passkeys or TOTP in the Dynamic widget
 
-- Optional step-up MFA for sensitive actions like mint or send
+  - Optional step-up MFA for sensitive actions like mint or send
 
 5. Make it really clear how to send money
 
- - Send page offers a faucet for test USDC
+  - Send page offers a faucet for test USDC
 
- - Instructions tell the user to open the Dynamic widget and press Send
+  - Instructions tell the user to open the Dynamic widget and press Send
 
- - Example test addresses provided to make it turnkey
+  - Example test addresses provided to make it turnkey
 
 ## Architecture
 
@@ -86,9 +86,9 @@ npm install
 
 3. Configure Dynamic
 
-- Enable Base Sepolia and Solana devnet
+  - Enable Base Sepolia and Solana devnet
 
-- Turn on Sponsored Gas and select your ZeroDev project and policy
+  - Turn on Sponsored Gas and select your ZeroDev project and policy
 
 3. Run the development server:
 
@@ -100,45 +100,45 @@ npm run dev
 
 1. Sign in
 
-- Two embedded wallets are created automatically
+ - Two embedded wallets are created automatically
 
-- Home shows email, active wallet address, enabled chains, and MFA status
+ - Home shows email, active wallet address, enabled chains, and MFA status
 
 2. Mint an NFT
 
-- Go to Mint
+ - Go to Mint
 
-- Click Mint
+ - Click Mint
 
-- Confirm in the widget and view the Block explorer link
+ - Confirm in the widget and view the Block explorer link
 
 3. Send money
 
-- Go to Send
+ - Go to Send
 
-- Click “Get 100 fUSDC” to fund with test tokens
+ - Click “Get 100 fUSDC” to fund with test tokens
 
-- Open the Dynamic widget and press Send
+ - Open the Dynamic widget and press Send
 
-- Choose fUSDC, paste an example address, send
+ - Choose fUSDC, paste an example address, send
 
-- Gas is sponsored, user pays 0$ in fees
+ - Gas is sponsored, user pays 0$ in fees
 
 4. Switch chains
 
-- Go to Chains
+ - Go to Chains
 
-- Use the widget or buttons to switch between Base Sepolia and Solana devnet
+ - Use the widget or buttons to switch between Base Sepolia and Solana devnet
 
-- The UI updates to reflect the active chain
+ - The UI updates to reflect the active chain
 
 5. Add security
 
-- Go to Security
+ - Go to Security
 
-- Read the TSS-MPC summary
+ - Read the TSS-MPC summary
 
-- Add a passkey or set up TOTP in the widget
+ - Add a passkey or set up TOTP in the widget
 
-- Optional: force MFA in onboarding or for sensitive actions via Dynamic Dashboard > Security settings
+ - Optional: force MFA in onboarding or for sensitive actions via Dynamic Dashboard > Security settings
 
