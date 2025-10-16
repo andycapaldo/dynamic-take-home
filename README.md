@@ -1,40 +1,38 @@
-# Dynamic Demo – Gasless Mint and Send with Embedded Wallets
+# Dynamic SDK + React Vite.js Demo
 
-A React demo that shows how the Dynamic SDK enables sign in, embedded wallets, gasless transactions, NFT minting, simple money sends, and MFA. Built for a take-home assessment.
+A React demo that shows how the Dynamic SDK integrates the Dynamic embedded wallet with a full-stack application.
 
-## What this demo covers
+## ✅ What this demo covers
 
-    - Sign in creates two embedded wallets: Base Sepolia and Solana devnet
-   
-    - Gasless transactions using a ZeroDev paymaster
-   
-    - NFT mint on Base Sepolia with a 2-click flow
-   
-    - “Send money” that is clear and simple
-   
-    - Multi-chain awareness and switching
-   
-    - Security page that explains TSS-MPC and shows MFA setup
+- **Embedded TSS-MPC wallets:** Base Sepolia and Solana devnet, right at sign-in
 
-## Customer issues and how this demo addresses them
+- **Gasless transactions** using a ZeroDev paymaster
+
+- **NFT mint** on Base Sepolia with a 2-click flow
+
+- **“Send money”** that is clear and simple
+
+- **Multi-chain** awareness and switching
+
+## ▶️ What you can do in this demo
 
 1. Mint NFTs using Dynamic’s embedded wallet
   
-    - Mint page calls a simple ERC-721 on Base Sepolia
+    - Mint page calls a simple ERC-721 contract on Base Sepolia
   
     - User confirms, transaction submits, explorer link appears
 
-2. Offer service on as many chains as Dynamic supports
+2. Offer services on as many chains as Dynamic supports
 
-    - App is wired for EVM and Solana today
+    - App is wired for EVM and SVM networks
   
     - Chains page explains how to enable more networks through the Dynamic dashboard without code changes
 
-3. Explain account abstraction and gas fees
+3. Account abstraction and gas fees
 
     - Gas is sponsored through a ZeroDev paymaster
   
-    - Copy on Home and Send pages explains that users do not need gas and why
+    - Users pay $0 in gas when signing EVM transactions in this app
 
 4. User security and additional security
 
@@ -52,15 +50,14 @@ A React demo that shows how the Dynamic SDK enables sign in, embedded wallets, g
   
     - Example test addresses provided to make it turnkey
 
-## Architecture
+## ⚙️ Environment Variables
+### `.env`)
 
-  - Dynamic React SDK for auth, embedded wallets, and widget
-  
-  - ZeroDev paymaster for sponsored gas on EVM
-  
-  - ERC-721 public mint on Base Sepolia for the demo collection
-  
-  - Fake USDC ERC-720 on Base Sepolia for the send flow
+```env
+VITE_DYNAMIC_ENVIRONMENT_ID=
+VITE_ZERODEV_PROJECT_ID=
+```
+> You can find your environment ID in the Dynamic dashboard on the top navbar
 
 ## Prerequisites
 
@@ -96,49 +93,6 @@ npm install
 npm run dev
 ```
 
-## How to use the demo
-
-1. Sign in
-
-   - Two embedded wallets are created automatically
-  
-   - Home shows email, active wallet address, enabled chains, and MFA status
-
-2. Mint an NFT
-
-   - Go to Mint
-  
-   - Click Mint
-  
-   - Confirm in the widget and view the Block explorer link
-
-3. Send money
-
-   - Go to Send
-  
-   - Click “Get 100 fUSDC” to fund with test tokens
-  
-   - Open the Dynamic widget and press Send
-  
-   - Choose fUSDC, paste an example address, send
-  
-   - Gas is sponsored, user pays 0$ in fees
-
-4. Switch chains
-
-   - Go to Chains
-  
-   - Use the widget or buttons to switch between Base Sepolia and Solana devnet
-  
-   - The UI updates to reflect the active chain
-
-5. Add security
-
-   - Go to Security
-  
-   - Read the TSS-MPC summary
-  
-   - Add a passkey or set up TOTP in the widget
-  
-   - Optional: force MFA in onboarding or for sensitive actions via Dynamic Dashboard > Security settings
-
+## :books: Reference Docs
+- [Dynamic Docs](https://docs.dynamic.xyz)
+- [ZeroDev Paymaster (for gas sponsorship)](https://docs.zerodev.app/sdk/core-api/sponsor-gas)
