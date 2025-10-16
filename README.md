@@ -4,6 +4,9 @@ A React demo that shows how the Dynamic SDK enables sign in, embedded wallets, g
 
 > Inspired by Dynamic’s [official examples.](https://github.com/dynamic-labs/examples)
 
+## Live Demo
+View a live demo of this app here: [Live Demo](https://dynamic-take-home-ashy.vercel.app/)
+
 ## ✅ What this demo covers
 
 - **Embedded TSS-MPC wallets:** Base Sepolia and Solana devnet, right at sign-in
